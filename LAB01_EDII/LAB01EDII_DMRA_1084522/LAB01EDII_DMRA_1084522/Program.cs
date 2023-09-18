@@ -59,9 +59,27 @@ namespace LAB01EDII_DMRA_1084522
                 }
             }
         }
-
+        private static void UserSearch()
+        {
+            Console.WriteLine("Enter a name to search for (or type 'exit' to quit): ");
+            string name;
+            while ((name = Console.ReadLine()) != "exit")
+            {
+                Record record = bTree.Search(name);
+                if (record != null)
+                {
+                    Console.WriteLine($"Found record: {JsonConvert.SerializeObject(record)}");
+                }
+                else
+                {
+                    Console.WriteLine($"No record found with name {name}");
+                }
+                Console.WriteLine("Enter another name to search for (or type 'exit' to quit): ");
+            }
+        }
     }
 }
+
 public class Record
 {
     public string Name { get; set; }
@@ -104,8 +122,29 @@ public class BTree
         root = null;
         this.degree = degree;
     }
+    public Record Search(string name)
+    {
+        return Search(root, name);
+    }
+    private Record Search(BTreeNode node, string name)
+    {
+        int idx = 0;
 
+        // Encuentra el índice del primer registro mayor o igual que name
+        while (idx < node.RecordCount && name.CompareTo(node.Records[idx].Name) > 0)
+            idx++;
 
+        // Si la clave es igual al registro en el índice idx, hemos encontrado el registro
+        if (idx < node.RecordCount && node.Records[idx].Name == name)
+            return node.Records[idx];
+
+        // Si este nodo es un nodo hoja, entonces la clave no está presente en el árbol
+        if (node.IsLeaf)
+            return null;
+
+        // De lo contrario, busca la clave en el subárbol correspondiente
+        return Search(node.Children[idx], name);
+    }
     // Método para insertar un nuevo registro
     public void Insert(Record record)
     {
@@ -139,7 +178,33 @@ public class BTree
             }
         }
     }
+    public void Delete(string name)
+    {
+        if (root == null)
+        {
+            Console.WriteLine("The tree is empty");
+            return;
+        }
 
+        // Call the recursive delete function for root
+        DeleteRecursive(root, name);
+
+        // If the root node has 0 keys, make its first child the new root if it exists, otherwise set root as null.
+        if (root.RecordCount == 0)
+        {
+            BTreeNode tempNode = root;
+
+            if (root.IsLeaf)
+                root = null;
+            else
+                root = root.Children[0];
+
+            // Free the old root
+            // In C#, garbage collector will take care of freeing, so we don't explicitly free the node.
+        }
+
+        return;
+    }
 
     private void InsertNonFull(BTreeNode node, Record record)
     {

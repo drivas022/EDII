@@ -6,313 +6,383 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LAB01EDII_DMRA_1084522
 {
     internal class Program
     {
-        public class Data
+        private static BTree bTree = new BTree(3);  // Asumimos un grado t=3 para el árbol B
+        /*********************MAIN*******************/
+        static void Main()
         {
-            public string name { get; set; }
-            public long dpi { get; set; }
-            public string datebirth { get; set; }
-            public string address { get; set; }
-        }
-        public class AccionData
-        {
-            public string Accion { get; set; }
-
-        }
-
-        /**********************************************************************/
-        public class AVLNode
-        {
-            //public string Name { get; set; }
-            public long Dpi { get; set; }
-            public int Height { get; set; }
-            public AVLNode Left { get; set; }
-            public AVLNode Right { get; set; }
-
-            public AVLNode(long dpi)
-            {
-                //Name = name;
-                Dpi = dpi;
-                Height = 1;
-                Left = null;
-                Right = null;
-            }
-        }
-        public class AVLTree
-        {
-            public AVLNode root;
-
-            public AVLTree()
-            {
-                root = null;
-            }
-
-            // Función para obtener la altura de un nodo
-            public int GetHeight(AVLNode node)
-            {
-                if (node == null)
-                    return 0;
-                return node.Height;
-            }
-
-            // Función para obtener el balance de un nodo
-            public int GetBalance(AVLNode node)
-            {
-                if (node == null)
-                    return 0;
-                return GetHeight(node.Left) - GetHeight(node.Right);
-            }
-
-            // Función para rotar a la derecha un subárbol con raíz en y
-            public AVLNode RotateRight(AVLNode y)
-            {
-                AVLNode x = y.Left;
-                AVLNode T2 = x.Right;
-
-                // Realizar la rotación
-                x.Right = y;
-                y.Left = T2;
-
-                // Actualizar alturas
-                y.Height = Math.Max(GetHeight(y.Left), GetHeight(y.Right)) + 1;
-                x.Height = Math.Max(GetHeight(x.Left), GetHeight(x.Right)) + 1;
-
-                return x;
-            }
-
-            // Función para rotar a la izquierda un subárbol con raíz en x
-            public AVLNode RotateLeft(AVLNode x)
-            {
-                AVLNode y = x.Right;
-                AVLNode T2 = y.Left;
-
-                // Realizar la rotación
-                y.Left = x;
-                x.Right = T2;
-
-                // Actualizar alturas
-                x.Height = Math.Max(GetHeight(x.Left), GetHeight(x.Right)) + 1;
-                y.Height = Math.Max(GetHeight(y.Left), GetHeight(y.Right)) + 1;
-
-                return y;
-            }
-
-            // Función para insertar un valor DPI en el árbol AVL
-            public void Insert(long dpi)
-            {
-                root = Insert(root, dpi);
-            }
-
-            public AVLNode Insert(AVLNode node, long dpi)
-            {
-                if (node == null)
-                    return new AVLNode(dpi);
-
-                if (dpi < node.Dpi)
-                    node.Left = Insert(node.Left, dpi);
-                else if (dpi > node.Dpi)
-                    node.Right = Insert(node.Right, dpi);
-                else // No permitir duplicados
-                    return node;
-
-                // Actualizar altura del nodo actual
-                node.Height = 1 + Math.Max(GetHeight(node.Left), GetHeight(node.Right));
-
-                // Obtener el balance del nodo y verificar si está desequilibrado
-                int balance = GetBalance(node);
-
-                // Caso de desequilibrio izquierda-izquierda
-                if (balance > 1 && dpi < node.Left.Dpi)
-                    return RotateRight(node);
-
-                // Caso de desequilibrio derecha-derecha
-                if (balance < -1 && dpi > node.Right.Dpi)
-                    return RotateLeft(node);
-
-                // Caso de desequilibrio izquierda-derecha
-                if (balance > 1 && dpi > node.Left.Dpi)
-                {
-                    node.Left = RotateLeft(node.Left);
-                    return RotateRight(node);
-                }
-
-                // Caso de desequilibrio derecha-izquierda
-                if (balance < -1 && dpi < node.Right.Dpi)
-                {
-                    node.Right = RotateRight(node.Right);
-                    return RotateLeft(node);
-                }
-
-                return node;
-            }
-            /**********************************************************************/
-            static void InsertRead()
-            {
-                string filePath = "C:\\Users\\driva\\OneDrive - Universidad Rafael Landivar\\Escritorio\\LAB01EDII_DMRA_1084522\\LAB01EDII_DMRA_1084522\\datos.txt"; // Cambia esto al nombre de tu archivo de texto
-
-                // Verificamos si el archivo existe
-                if (!File.Exists(filePath))
-                {
-                    Console.WriteLine("El archivo no existe.");
-                    return;
-                }
-
-                try
-                {
-                    using (StreamReader reader = new StreamReader(filePath))
-                    {
-                        while (!reader.EndOfStream)
-                        {
-                            string line = reader.ReadLine();
-                            if (!string.IsNullOrEmpty(line))
-                            {
-                                string[] lines = File.ReadAllLines(filePath);
-
-                                // Dividimos la línea en campos utilizando punto y coma como delimitador
-                                string[] campos = line.Split(';');
-
-                                // Aseguramos que haya al menos dos campos (ACCION y DATA)
-                                if (campos.Length >= 2)
-                                {
-                                    string accion = campos[0]; // El primer campo es ACCION
-                                    string jsonData = campos[1]; // El segundo campo es DATA en formato JSON
-
-                                    Data data = JsonConvert.DeserializeObject<Data>(jsonData);
-                                    //Console.Write($"ACCION: {accion}, NAME: {data.name}, DPI: {data.dpi}, DATE BIRTH: {data.datebirth}, ADRESS: {data.address}\n");
-                                    if (accion == "INSERT")
-                                    {
-                                        AVLTree tree = new AVLTree();
-                                        // Insertar valores del DPI en el árbol
-                                        tree.Insert(data.dpi);
-                                        Console.WriteLine($" name: {data.name}, dpi: {data.dpi}, dateBirth: {data.datebirth}, address: {data.name}");
-                                    }
-                                }
-                                else
-                                {
-                                    Console.WriteLine("La línea no tiene la estructura esperada: " + line);
-                                }
-                            }
-                        }
-                        Console.ReadKey();
-                    }
-                }
-
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Ocurrió un error al leer el archivo: " + ex.Message);
-                }
-            }
-            static void Buscar()
-            {
-                string Sname;
-
-                string filePath = "C:\\Users\\driva\\OneDrive - Universidad Rafael Landivar\\Escritorio\\LAB01EDII_DMRA_1084522\\LAB01EDII_DMRA_1084522\\datos.txt"; // Cambia esto al nombre de tu archivo de texto
-
-                // Verificamos si el archivo existe
-                if (!File.Exists(filePath))
-                {
-                    Console.WriteLine("El archivo no existe.");
-                    return;
-                }
-
-                try
-                {
-                    using (StreamReader reader = new StreamReader(filePath))
-                    {
-                        while (!reader.EndOfStream)
-                        {
-                            string line = reader.ReadLine();
-                            if (!string.IsNullOrEmpty(line))
-                            {
-                                string[] lines = File.ReadAllLines(filePath);
-
-                                // Dividimos la línea en campos utilizando punto y coma como delimitador
-                                string[] campos = line.Split(';');
-
-                                // Aseguramos que haya al menos dos campos (ACCION y DATA)
-                                if (campos.Length >= 2)
-                                {
-                                    string accion = campos[0]; // El primer campo es ACCION
-                                    string jsonData = campos[1]; // El segundo campo es DATA en formato JSON
-
-                                    Data data = JsonConvert.DeserializeObject<Data>(jsonData);
-                                    //Console.Write($"ACCION: {accion}, NAME: {data.name}, DPI: {data.dpi}, DATE BIRTH: {data.datebirth}, ADRESS: {data.address}\n");
-
-                                    Console.WriteLine("Ingrese el nombre y apellido a buscar");
-                                    Sname = Console.ReadLine();
-                                    if (Sname == data.name)
-                                    {
-                                        Console.Write($"NAME: {data.name}, DPI: {data.dpi}, DATE BIRTH: {data.datebirth}, ADRESS: {data.address}\n");
-                                        Console.ReadKey();
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("No hay nombres asignados");
-                                        Console.ReadKey();
-
-                                    }
-                                    Console.Clear();
-                                }
-                                else
-                                {
-                                    Console.WriteLine("La línea no tiene la estructura esperada: " + line);
-                                }
-                            }
-                        }
-                        Console.ReadKey();
-                    }
-                }
-
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Ocurrió un error al leer el archivo: " + ex.Message);
-                }
-            }
-            static void PatchRead()
-            {
-
-            }
-
-            static void DeleteRead()
-            {
-
-            }
-            static void Main(string[] args)
-            {
-
-                int op = 0;
-                Console.WriteLine("MENU");
-                Console.WriteLine("1. INSERT");
-                Console.WriteLine("2. DELETE");
-                Console.WriteLine("3. PATCH");
-                Console.WriteLine("4. SEARCH");
-                op = Convert.ToInt16(Console.ReadLine());
-
-
-                switch (op)
-                {
-                    case 1:
-                        InsertRead();
-                        break;
-                    case 2:
-
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        Buscar();
-                        break;
-                }
-            }
-
-         
             
+
         }
+        /********************************************/
+        private static void LoadCommandsFromFile(string path)
+        {
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.StartsWith("INSERT;"))
+                    {
+                        string json = line.Substring(7);
+                        Record record = JsonConvert.DeserializeObject<Record>(json);
+                        bTree.Insert(record);
+                    }
+                    else if (line.StartsWith("PATCH;"))
+                    {
+                        string json = line.Substring(6);
+                        Record newRecord = JsonConvert.DeserializeObject<Record>(json);
+                        Record existingRecord = bTree.Search(newRecord.Name);
+                        if (existingRecord != null)
+                        {
+                            // Actualizar los campos del registro existente (aquí asumimos que todos los campos pueden ser actualizados)
+                            existingRecord.DPI = newRecord.DPI;
+                            existingRecord.DateBirth = newRecord.DateBirth;
+                            existingRecord.Address = newRecord.Address;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"No record found with name {newRecord.Name} for updating.");
+                        }
+                    }
+                    else if (line.StartsWith("DELETE;"))
+                    {
+                        string json = line.Substring(7);
+                        Record record = JsonConvert.DeserializeObject<Record>(json);
+                        bTree.Delete(record.Name);
+                    }
+                }
+            }
+        }
+
     }
 }
+public class Record
+{
+    public string Name { get; set; }
+    public string DPI { get; set; }
+    public string DateBirth { get; set; }
+    public string Address { get; set; }
 
+    public Record(string name, string dpi, string dateBirth, string address)
+    {
+        Name = name;
+        DPI = dpi;
+        DateBirth = dateBirth;
+        Address = address;
+    }
+}
+public class BTreeNode
+{
+    public Record[] Records { get; set; }
+    public int Degree { get; private set; }
+    public BTreeNode[] Children { get; set; }
+    public int RecordCount { get; set; }
+    public bool IsLeaf { get; set; }
+
+    public BTreeNode(int degree, bool isLeaf)
+    {
+        Degree = degree;
+        IsLeaf = isLeaf;
+        Records = new Record[2 * degree - 1];
+        Children = new BTreeNode[2 * degree];
+        RecordCount = 0;
+    }
+}
+public class BTree
+{
+    private BTreeNode root;
+    private int degree;
+
+    public BTree(int degree)
+    {
+        root = null;
+        this.degree = degree;
+    }
+
+
+    // Método para insertar un nuevo registro
+    public void Insert(Record record)
+    {
+        // 1. If the tree is empty
+        if (root == null)
+        {
+            root = new BTreeNode(degree, true);
+            root.Records[0] = record;
+            root.RecordCount = 1;
+        }
+        else
+        {
+            // 2. If the root node is full, then tree grows in height
+            if (root.RecordCount == 2 * degree - 1)
+            {
+                BTreeNode newNode = new BTreeNode(degree, false);
+                newNode.Children[0] = root;
+                SplitChild(newNode, 0, root);
+
+                // Decide which of the two children is going to have the new record
+                int i = 0;
+                if (newNode.Records[0].Name.CompareTo(record.Name) < 0)
+                    i++;
+                InsertNonFull(newNode.Children[i], record);
+
+                root = newNode;
+            }
+            else
+            {
+                InsertNonFull(root, record);
+            }
+        }
+    }
+
+
+    private void InsertNonFull(BTreeNode node, Record record)
+    {
+        int i = node.RecordCount - 1;
+
+        if (node.IsLeaf)
+        {
+            while (i >= 0 && record.Name.CompareTo(node.Records[i].Name) < 0)
+            {
+                node.Records[i + 1] = node.Records[i];
+                i--;
+            }
+
+            node.Records[i + 1] = record;
+            node.RecordCount += 1;
+        }
+        else
+        {
+            while (i >= 0 && record.Name.CompareTo(node.Records[i].Name) < 0)
+                i--;
+
+            i++;
+            BTreeNode child = node.Children[i];
+
+            if (child.RecordCount == 2 * degree - 1)
+            {
+                SplitChild(node, i, child);
+
+                if (record.Name.CompareTo(node.Records[i].Name) > 0)
+                    i++;
+            }
+
+            InsertNonFull(node.Children[i], record);
+        }
+    }
+    private void SplitChild(BTreeNode parentNode, int i, BTreeNode nodeToSplit)
+    {
+        BTreeNode newNode = new BTreeNode(nodeToSplit.Degree, nodeToSplit.IsLeaf);
+        newNode.RecordCount = degree - 1;
+
+        for (int j = 0; j < degree - 1; j++)
+            newNode.Records[j] = nodeToSplit.Records[j + degree];
+
+        if (!nodeToSplit.IsLeaf)
+        {
+            for (int j = 0; j < degree; j++)
+                newNode.Children[j] = nodeToSplit.Children[j + degree];
+        }
+
+        nodeToSplit.RecordCount = degree - 1;
+
+        for (int j = parentNode.RecordCount; j >= i + 1; j--)
+            parentNode.Children[j + 1] = parentNode.Children[j];
+
+        parentNode.Children[i + 1] = newNode;
+
+        for (int j = parentNode.RecordCount - 1; j >= i; j--)
+            parentNode.Records[j + 1] = parentNode.Records[j];
+
+        parentNode.Records[i] = nodeToSplit.Records[degree - 1];
+
+        parentNode.RecordCount += 1;
+    }
+    private void DeleteRecursive(BTreeNode node, string name)
+    {
+        int idx = 0;
+
+        while (idx < node.RecordCount && name.CompareTo(node.Records[idx].Name) > 0)
+            idx++;
+
+        if (idx < node.RecordCount && name == node.Records[idx].Name)
+        {
+            if (node.IsLeaf)
+            {
+                RemoveFromLeaf(node, idx);
+            }
+            else
+            {
+                RemoveFromNonLeaf(node, idx);
+            }
+        }
+        else
+        {
+            if (node.IsLeaf)
+            {
+                Console.WriteLine("The record with name " + name + " does not exist in the tree.");
+                return;
+            }
+
+            bool flag = (idx == node.RecordCount);
+
+            if (node.Children[idx].RecordCount < degree)
+                Fill(node, idx);
+
+            if (flag && idx > node.RecordCount)
+                DeleteRecursive(node.Children[idx - 1], name);
+            else
+                DeleteRecursive(node.Children[idx], name);
+        }
+    }
+    private void RemoveFromLeaf(BTreeNode node, int idx)
+    {
+        for (int i = idx + 1; i < node.RecordCount; ++i)
+            node.Records[i - 1] = node.Records[i];
+
+        node.RecordCount--;
+    }
+    private void Fill(BTreeNode node, int idx)
+    {
+        if (idx != 0 && node.Children[idx - 1].RecordCount >= degree)
+            BorrowFromPrev(node, idx);
+        else if (idx != node.RecordCount && node.Children[idx + 1].RecordCount >= degree)
+            BorrowFromNext(node, idx);
+        else
+        {
+            if (idx != node.RecordCount)
+                Merge(node, idx);
+            else
+                Merge(node, idx - 1);
+        }
+    }
+    private void BorrowFromPrev(BTreeNode node, int idx)
+    {
+        BTreeNode child = node.Children[idx];
+        BTreeNode sibling = node.Children[idx - 1];
+
+        for (int i = child.RecordCount - 1; i >= 0; --i)
+            child.Records[i + 1] = child.Records[i];
+
+        if (!child.IsLeaf)
+        {
+            for (int i = child.RecordCount; i >= 0; --i)
+                child.Children[i + 1] = child.Children[i];
+        }
+
+        child.Records[0] = node.Records[idx - 1];
+
+        if (!node.IsLeaf)
+            child.Children[0] = sibling.Children[sibling.RecordCount];
+
+        node.Records[idx - 1] = sibling.Records[sibling.RecordCount - 1];
+
+        child.RecordCount += 1;
+        sibling.RecordCount -= 1;
+
+        return;
+    }
+    private void BorrowFromNext(BTreeNode node, int idx)
+    {
+        BTreeNode child = node.Children[idx];
+        BTreeNode sibling = node.Children[idx + 1];
+
+        child.Records[child.RecordCount] = node.Records[idx];
+
+        if (!child.IsLeaf)
+            child.Children[child.RecordCount + 1] = sibling.Children[0];
+
+        node.Records[idx] = sibling.Records[0];
+
+        for (int i = 1; i < sibling.RecordCount; ++i)
+            sibling.Records[i - 1] = sibling.Records[i];
+
+        if (!sibling.IsLeaf)
+        {
+            for (int i = 1; i <= sibling.RecordCount; ++i)
+                sibling.Children[i - 1] = sibling.Children[i];
+        }
+
+        child.RecordCount += 1;
+        sibling.RecordCount -= 1;
+
+        return;
+    }
+    private void Merge(BTreeNode node, int idx)
+    {
+        BTreeNode child = node.Children[idx];
+        BTreeNode sibling = node.Children[idx + 1];
+
+        child.Records[degree - 1] = node.Records[idx];
+
+        for (int i = 0; i < sibling.RecordCount; ++i)
+            child.Records[i + degree] = sibling.Records[i];
+
+        if (!child.IsLeaf)
+        {
+            for (int i = 0; i <= sibling.RecordCount; ++i)
+                child.Children[i + degree] = sibling.Children[i];
+        }
+
+        for (int i = idx + 1; i < node.RecordCount; ++i)
+            node.Records[i - 1] = node.Records[i];
+
+        for (int i = idx + 2; i <= node.RecordCount; ++i)
+            node.Children[i - 1] = node.Children[i];
+
+        child.RecordCount += sibling.RecordCount + 1;
+        node.RecordCount--;
+
+    }
+    private void RemoveFromNonLeaf(BTreeNode node, int idx)
+    {
+        Record key = node.Records[idx];
+
+        // Caso 1
+        if (node.Children[idx].RecordCount >= degree)
+        {
+            Record pred = GetPredecessor(node, idx);
+            node.Records[idx] = pred;
+            DeleteRecursive(node.Children[idx], pred.Name);
+        }
+        // Caso 2
+        else if (node.Children[idx + 1].RecordCount >= degree)
+        {
+            Record succ = GetSuccessor(node, idx);
+            node.Records[idx] = succ;
+            DeleteRecursive(node.Children[idx + 1], succ.Name);
+        }
+        // Caso 3
+        else
+        {
+            Merge(node, idx);
+            DeleteRecursive(node.Children[idx], key.Name);
+        }
+    }
+    private Record GetPredecessor(BTreeNode node, int idx)
+    {
+        // Mueve al nodo más a la derecha hasta llegar a un nodo hoja
+        BTreeNode cur = node.Children[idx];
+        while (!cur.IsLeaf)
+            cur = cur.Children[cur.RecordCount];
+
+        // Devuelve el último registro del nodo hoja
+        return cur.Records[cur.RecordCount - 1];
+    }
+    private Record GetSuccessor(BTreeNode node, int idx)
+    {
+        // Mueve al nodo más a la izquierda hasta llegar a un nodo hoja
+        BTreeNode cur = node.Children[idx + 1];
+        while (!cur.IsLeaf)
+            cur = cur.Children[0];
+
+        // Devuelve el primer registro del nodo hoja
+        return cur.Records[0];
+    }
+}
 

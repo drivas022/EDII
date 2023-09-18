@@ -20,3 +20,14 @@ C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01EDII_DMRA_
 C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.csproj.CopyComplete
 C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.exe
 C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\bin\Debug\LAB01EDII_DMRA_1084522.exe.config
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\bin\Debug\LAB01EDII_DMRA_1084522.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\bin\Debug\LAB01EDII_DMRA_1084522.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\bin\Debug\Newtonsoft.Json.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\bin\Debug\Newtonsoft.Json.xml
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.csproj.AssemblyReference.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.csproj.SuggestedBindingRedirects.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.csproj.CoreCompileInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.csproj.CopyComplete
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\LAB01_EDII\LAB01EDII_DMRA_1084522\LAB01EDII_DMRA_1084522\obj\Debug\LAB01EDII_DMRA_1084522.pdb

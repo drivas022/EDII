@@ -16,7 +16,10 @@ namespace LAB01EDII_DMRA_1084522
         /*********************MAIN*******************/
         static void Main()
         {
-            
+            LoadCommandsFromFile(@"C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\datos .txt");  // Reemplazar con la ruta correcta al archivo de comandos
+
+            // Permitir que el usuario busque registros
+            UserSearch();
 
         }
         /********************************************/

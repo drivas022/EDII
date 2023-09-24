@@ -1,0 +1,11 @@
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\bin\Debug\Lab2_DiegoRivas.exe.config
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\bin\Debug\Lab2_DiegoRivas.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\bin\Debug\Lab2_DiegoRivas.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.csproj.AssemblyReference.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.csproj.SuggestedBindingRedirects.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.csproj.CoreCompileInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\bin\Debug\Newtonsoft.Json.xml
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab2_DiegoRivas\Lab2_DiegoRivas\obj\Debug\Lab2_DiegoRivas.csproj.CopyComplete

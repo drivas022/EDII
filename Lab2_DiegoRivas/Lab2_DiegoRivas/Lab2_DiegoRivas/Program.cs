@@ -8,6 +8,66 @@ using System.Threading.Tasks;
 
 namespace Lab2_DiegoRivas
 {
+    public class LZ78
+    {
+        public static List<Tuple<int, char>> Compress(string input)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            List<Tuple<int, char>> output = new List<Tuple<int, char>>();
+            int dictSize = 1;
+            string s = string.Empty;
+
+            foreach (char c in input)
+            {
+                if (dict.ContainsKey(s + c))
+                {
+                    s = s + c;
+                }
+                else
+                {
+                    if (s == "")
+                        output.Add(new Tuple<int, char>(0, c));
+                    else
+                        output.Add(new Tuple<int, char>(dict[s], c));
+                    dict[s + c] = dictSize++;
+                    s = string.Empty;
+                }
+            }
+            if (s != "")
+                output.Add(new Tuple<int, char>(dict[s], '\0'));
+
+            return output;
+        }
+
+        public static string Decompress(List<Tuple<int, char>> input)
+        {
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            int dictSize = 1;
+            string s = string.Empty;
+            string result = string.Empty;
+
+            foreach (var pair in input)
+            {
+                int prevIndex = pair.Item1;
+                char c = pair.Item2;
+
+                if (dict.ContainsKey(prevIndex))
+                    s = dict[prevIndex];
+                else if (prevIndex == 0)
+                    s = string.Empty;
+                else
+                    throw new Exception("Bad compressed data");
+
+                result += s + c;
+                dict[dictSize++] = s + c;
+            }
+
+            return result;
+        }
+
+    }
+
+
     public class PersonData
     {
         public string name { get; set; }
@@ -263,6 +323,18 @@ namespace Lab2_DiegoRivas
                 node.Data = data;
             }
         }
+        public void InsertA(PersonData data)
+        {
+            // Codificar 'dpi' y 'companies' con LZ78
+            var compressedDpi = LZ78.Compress(data.dpi);
+            var compressedCompanies = LZ78.Compress(string.Join(",", data.companies));
+
+            // Convertir los datos comprimidos a strings (para la simplicidad, puedes usar otros métodos)
+            data.dpi = string.Join(";", compressedDpi.Select(t => $"{t.Item1},{t.Item2}"));
+            data.companies = new List<string> { string.Join(";", compressedCompanies.Select(t => $"{t.Item1},{t.Item2}")) };
+
+            Root = Insert(Root, data);
+        }
 
 
     }//llave de la clase AVL tree
@@ -340,7 +412,10 @@ namespace Lab2_DiegoRivas
             }
 
             return tree;
+
+
         }
+
 
         /*public static void ProcessCSVFile(string filePath)
         {
@@ -377,5 +452,5 @@ namespace Lab2_DiegoRivas
         }*/
     }
 
-    
+
 }

@@ -1,0 +1,68 @@
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.exe
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.deps.json
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.runtimeconfig.json
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.AssemblyReference.cache
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfoInputs.cache
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfo.cs
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CoreCompileInputs.cache
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CopyComplete
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\refint\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.genruntimeconfig.cache
+C:\Users\gamer\Desktop\Tareas\Tercer ciclo\Estructura de Datos I\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\ref\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.exe
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.deps.json
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.runtimeconfig.json
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.AssemblyReference.cache
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfoInputs.cache
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfo.cs
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CoreCompileInputs.cache
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CopyComplete
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\refint\Lab_DiegoRivas_DatosII.dll
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.genruntimeconfig.cache
+C:\Users\gamer\Desktop\Tareas\Cuarto ciclo\Estructura de datos II\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\ref\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.deps.json
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.runtimeconfig.json
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.AssemblyReference.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfoInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfo.cs
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CoreCompileInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CopyComplete
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\refint\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.genruntimeconfig.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\ref\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.exe
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.deps.json
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.runtimeconfig.json
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.AssemblyReference.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfoInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.AssemblyInfo.cs
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CoreCompileInputs.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.csproj.CopyComplete
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\refint\Lab_DiegoRivas_DatosII.dll
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.pdb
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\Lab_DiegoRivas_DatosII.genruntimeconfig.cache
+C:\Users\driva\OneDrive - Universidad Rafael Landivar\Escritorio\Lab_DiegoRivas_DatosII - copia\Lab_DiegoRivas_DatosII\obj\Debug\net6.0\ref\Lab_DiegoRivas_DatosII.dll
